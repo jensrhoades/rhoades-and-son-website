@@ -1,0 +1,28 @@
+baseURL = "https://rhoadesandson.com/"
+languageCode = "en-us"
+title = "Rhoades & Son Home Inspections"
+
+[params]
+  phone = "651-564-0946"
+  email = "rhoadesandson@gmail.com"
+  address = "Willow River, MN 55795"
+  tagline = "Two Generations. One Standard of Excellence."
+  description = "Home inspections across northern and central Minnesota. 20+ years of construction experience behind every report."
+
+[menu]
+  [[menu.main]]
+    name = "Services"
+    url = "/services/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "Service Area"
+    url = "/service-area/"
+    weight = 3
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
