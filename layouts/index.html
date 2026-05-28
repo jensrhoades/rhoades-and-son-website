@@ -1,0 +1,104 @@
+{{ define "main" }}
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Know what you're buying.</h1>
+    <p class="hero-tagline">Home inspections across northern and central Minnesota. 20+ years of construction experience behind every report we write.</p>
+    <a href="/contact/" class="btn btn-primary">Schedule your inspection</a>
+  </div>
+</section>
+
+<section class="section about-preview">
+  <div class="container">
+    <div class="about-row">
+      <div class="about-photo">
+        <img src="/images/dusty-placeholder.jpg" alt="Dusty Rhoades">
+      </div>
+      <div class="about-text">
+        <h2>Your inspector built houses for 20 years before he started inspecting them.</h2>
+        <p>Most inspectors can tell you something is wrong. We can tell you why. Dusty spent two decades in residential construction, framing walls, running mechanicals, roofing, finishing. He knows what's behind the drywall because he's the one who put it there.</p>
+        <p>He also teaches construction to high school students, which means he's spent years breaking down building concepts for people who've never picked up a hammer. Your report won't be full of jargon. Your walkthrough won't leave you guessing.</p>
+        <a href="/about/" class="btn btn-outline">More about us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt services-preview">
+  <div class="container">
+    <h2>Services</h2>
+    <p class="section-subtitle">Thorough inspections for buyers and sellers.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Buyer home inspection</h3>
+        <p>Full inspection following InterNACHI standards of practice. Every accessible system checked, from the roof to the foundation. Detailed photo report delivered within 24-48 hours, plus an on-site walkthrough of findings and your home's major systems.</p>
+      </div>
+      <div class="service-card">
+        <h3>Pre-listing inspection</h3>
+        <p>Find out what a buyer's inspector will find before you list. Fix what matters on your timeline, at non-rush pricing, and go into negotiations with no surprises. Especially worth doing for homes over 30 years old.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section process">
+  <div class="container">
+    <h2>What to expect</h2>
+    <p class="section-subtitle">From first call to final report.</p>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Call or book online</div>
+        <div class="step-desc">We'll get the pre-inspection agreement signed and get you on the schedule. Most inspections booked within the week.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">The inspection</div>
+        <div class="step-desc">1.5 to 4 hours on site depending on the size and age of the home. Exterior first, then interior, working from the basement up through every accessible system.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">The walkthrough</div>
+        <div class="step-desc">After the inspection, we walk you through findings on site. We'll also show you where your shut-offs are, where the filters go, and how your major systems work.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">Your report</div>
+        <div class="step-desc">Detailed written report with photos delivered within 24-48 hours. Wide-angle shots so you can see exactly where each finding is located. Follow-up questions welcome anytime by phone or video call.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt service-area-preview">
+  <div class="container text-center">
+    <h2>Serving northern and central Minnesota</h2>
+    <p class="section-subtitle">From the Arrowhead to the Brainerd Lakes area and along the I-35 corridor north of the Cities.</p>
+    <div class="area-tags">
+      <span class="area-tag">Duluth</span>
+      <span class="area-tag">Cloquet</span>
+      <span class="area-tag">Two Harbors</span>
+      <span class="area-tag">Grand Rapids</span>
+      <span class="area-tag">Brainerd</span>
+      <span class="area-tag">Hinckley</span>
+      <span class="area-tag">Pine City</span>
+      <span class="area-tag">Moose Lake</span>
+      <span class="area-tag">Willow River</span>
+      <span class="area-tag">Sandstone</span>
+      <span class="area-tag">Aitkin</span>
+      <span class="area-tag">Carlton</span>
+      <a href="/service-area/" class="area-tag area-tag-link">+ more</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container text-center">
+    <h2>Ready to schedule?</h2>
+    <p>Call, text, or fill out the form. We'll get back to you within one business day.</p>
+    <a href="tel:{{ .Site.Params.phone }}" class="cta-phone">{{ .Site.Params.phone }}</a>
+    <a href="/contact/" class="btn btn-primary">Request an inspection</a>
+  </div>
+</section>
+
+{{ end }}
