@@ -4,7 +4,7 @@
   <div class="hero-content">
     <h1>Know what you're buying.</h1>
     <p class="hero-tagline">Home inspections across northern and central Minnesota. 20+ years of construction experience behind every report we write.</p>
-    <a href="/contact/" class="btn btn-primary">Schedule your inspection</a>
+    <a href="{{ "contact/" | relURL }}" class="btn btn-primary">Schedule your inspection</a>
   </div>
 </section>
 
@@ -12,13 +12,13 @@
   <div class="container">
     <div class="about-row">
       <div class="about-photo">
-        <img src="/images/dusty-placeholder.jpg" alt="Dusty Rhoades">
+        <img src="{{ "images/dusty-placeholder.jpg" | relURL }}" alt="Dusty Rhoades">
       </div>
       <div class="about-text">
         <h2>Your inspector built houses for 20 years before he started inspecting them.</h2>
         <p>Most inspectors can tell you something is wrong. We can tell you why. Dusty spent two decades in residential construction, framing walls, running mechanicals, roofing, finishing. He knows what's behind the drywall because he's the one who put it there.</p>
         <p>He also teaches construction to high school students, which means he's spent years breaking down building concepts for people who've never picked up a hammer. Your report won't be full of jargon. Your walkthrough won't leave you guessing.</p>
-        <a href="/about/" class="btn btn-outline">More about us</a>
+        <a href="{{ "about/" | relURL }}" class="btn btn-outline">More about us</a>
       </div>
     </div>
   </div>
@@ -87,7 +87,7 @@
       <span class="area-tag">Sandstone</span>
       <span class="area-tag">Aitkin</span>
       <span class="area-tag">Carlton</span>
-      <a href="/service-area/" class="area-tag area-tag-link">+ more</a>
+      <a href="{{ "service-area/" | relURL }}" class="area-tag area-tag-link">+ more</a>
     </div>
   </div>
 </section>
@@ -97,7 +97,7 @@
     <h2>Ready to schedule?</h2>
     <p>Call, text, or fill out the form. We'll get back to you within one business day.</p>
     <a href="tel:{{ .Site.Params.phone }}" class="cta-phone">{{ .Site.Params.phone }}</a>
-    <a href="/contact/" class="btn btn-primary">Request an inspection</a>
+    <a href="{{ "contact/" | relURL }}" class="btn btn-primary">Request an inspection</a>
   </div>
 </section>
 
