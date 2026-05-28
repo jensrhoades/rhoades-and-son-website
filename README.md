@@ -1,2 +1,3 @@
-# rhoades-and-son-website
-Rhoades &amp; Son Home Inspections - Static website built with Hugo
+# Rhoades & Son Home Inspections
+
+rhoadesandson.com - Static site built with Hugo, deployed via GitHub Pages.
