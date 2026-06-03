@@ -698,6 +698,24 @@ a:hover { color: var(--teal-hover); }
   }
 
   .footer-info { text-align: center; }
+
+  .services-hero-inner {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .services-hero-photo {
+    width: 100%;
+    height: 240px;
+  }
+
+  .service-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .findings-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
