@@ -751,6 +751,10 @@ a:hover { color: var(--teal-hover); }
   .findings-grid {
     grid-template-columns: 1fr;
   }
+
+  .area-regions {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
