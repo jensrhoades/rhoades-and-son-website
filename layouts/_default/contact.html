@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<section class="section">
+  <div class="container">
+    <h1>Schedule your inspection</h1>
+    <p class="section-subtitle">Pick a date and time that works for you. We'll confirm within one business day.</p>
+    <div class="scheduler-wrap">
+      <iframe src="https://widget.inspectortoolbelt.com/scheduler/jjpi4XyYNDeAnRsjAVLPqlBBHHx2/xfJj8rnqdpCvS9cebl3s?iframe=1" style="border:0;height:1500px;width:100%;" loading="lazy" title="Schedule a home inspection"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container text-center">
+    <h2>Prefer to call or email?</h2>
+    <p>No problem. Reach us directly.</p>
+    <p><a href="tel:{{ .Site.Params.phone }}" class="cta-phone">{{ .Site.Params.phone }}</a></p>
+    <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+  </div>
+</section>
+
+{{ end }}
