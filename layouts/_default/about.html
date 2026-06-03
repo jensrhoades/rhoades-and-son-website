@@ -1,0 +1,72 @@
+{{ define "main" }}
+
+<section class="section">
+  <div class="container">
+    <div class="about-row">
+      <div class="about-photo">
+        <img src="{{ "images/dusty-placeholder.jpg" | relURL }}" alt="Dusty Rhoades">
+      </div>
+      <div class="about-text">
+        <h1>Meet Dusty Rhoades</h1>
+        <p>Most inspectors can tell you something is wrong. Dusty can tell you why. He spent twenty years in residential construction, framing walls, running mechanicals, roofing, finishing. He knows what's behind the drywall because he's the one who put it there.</p>
+        <p>He also teaches construction to high school students, which means he's spent years breaking down building concepts for people who've never picked up a hammer. Your report won't be full of jargon. Your walkthrough won't leave you guessing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2>Two generations, one standard</h2>
+    <p>Rhoades &amp; Son is Dusty and his son Gunnar. When Dusty decided to put his construction background to work as an inspector, bringing Gunnar along was a natural fit. Same attention to detail, same commitment to doing the job right.</p>
+    <p>Every inspection follows InterNACHI's Standards of Practice. Every accessible system gets checked, from the roof to the foundation. And every report gets a walkthrough so you know exactly what you're looking at.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Credentials</h2>
+    <p>Dusty is a Certified Professional Inspector through the International Association of Certified Home Inspectors. Here's the training behind the certification.</p>
+    <div class="certs-grid">
+      <a href="{{ "docs/Online_inspector_Exam.pdf" | relURL }}" class="cert-card" target="_blank">
+        <div class="cert-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
+        </div>
+        <div class="cert-title">Online Inspector Exam</div>
+        <div class="cert-meta">InterNACHI &middot; January 2024</div>
+      </a>
+      <a href="{{ "docs/Home_Inspections_Standards_of_Practice_Course.pdf" | relURL }}" class="cert-card" target="_blank">
+        <div class="cert-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
+        </div>
+        <div class="cert-title">Standards of Practice</div>
+        <div class="cert-meta">38 credit hours &middot; April 2026</div>
+      </a>
+      <a href="{{ "docs/Code_of_Ethics_Course.pdf" | relURL }}" class="cert-card" target="_blank">
+        <div class="cert-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
+        </div>
+        <div class="cert-title">Code of Ethics</div>
+        <div class="cert-meta">13 credit hours &middot; April 2026</div>
+      </a>
+      <a href="{{ "docs/How_to_Perform_Residential_Electrical_Inspections.pdf" | relURL }}" class="cert-card" target="_blank">
+        <div class="cert-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
+        </div>
+        <div class="cert-title">Residential Electrical Inspections</div>
+        <div class="cert-meta">51 credit hours &middot; May 2026</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container text-center">
+    <h2>Ready to schedule?</h2>
+    <p>Call, text, or fill out the form. We'll get back to you within one business day.</p>
+    <a href="tel:{{ .Site.Params.phone }}" class="cta-phone">{{ .Site.Params.phone }}</a>
+    <a href="{{ "contact/" | relURL }}" class="btn btn-primary">Request an inspection</a>
+  </div>
+</section>
+
+{{ end }}
