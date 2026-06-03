@@ -1,6 +1,5 @@
 ---
 title: "Contact"
-description: "Schedule a home inspection with Rhoades & Son. Call 651-564-0946 or fill out our form."
+description: "Schedule a home inspection with Rhoades & Son. Online booking, or call and email us directly."
+layout: "contact"
 ---
-
-Content coming soon.
