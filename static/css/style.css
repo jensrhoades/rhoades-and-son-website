@@ -431,6 +431,19 @@ a:hover { color: var(--teal-hover); }
   gap: 24px;
 }
 
+.footer-nachi {
+  margin-top: 0.5rem;
+}
+
+.nachi-seal {
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.nachi-seal:hover {
+  opacity: 1;
+}
+
 .footer-logo-img {
   width: 100px;
   height: auto;
