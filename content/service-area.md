@@ -1,6 +1,5 @@
 ---
 title: "Service Area"
-description: "Rhoades & Son Home Inspections serves northern and central Minnesota, from the Arrowhead to the Brainerd Lakes area."
+description: "Home inspections across northern and central Minnesota. Duluth, Iron Range, Brainerd Lakes, I-35 corridor. Based in Willow River."
+layout: "service-area"
 ---
-
-Content coming soon.
