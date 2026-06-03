@@ -1,0 +1,163 @@
+{{ define "main" }}
+
+<section class="services-hero">
+  <div class="services-hero-inner">
+    <div class="services-hero-photo">
+      <img src="{{ "images/1000005264.jpg" | relURL }}" alt="Dusty Rhoades inspecting an attic crawlspace">
+    </div>
+    <div class="services-hero-text">
+      <h1>What you get when you hire us</h1>
+      <p>I built houses for twenty years before I started inspecting them. Framing, insulation, sheetrock, roofing, finishing. I know what's behind the walls because I'm the one who put it there.</p>
+      <p>When I work for you, you're getting more than just a report. I go through the house. I find what's wrong and what's not. And I explain what I found in words that make sense.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="service-detail-grid">
+      <div class="service-detail-card">
+        <h2>Buyer home inspection</h2>
+        <p>Full inspection following InterNACHI standards of practice. Every accessible system gets checked, from the roof to the foundation. I start with the neighborhood and lot, then work the exterior, then go inside and work from the basement up through every floor to the attic.</p>
+        <p>Plan on 1.5 to 4 hours depending on the size and age of the home. When I'm done, I walk you through findings on site. I'll show you where your shut-offs are, where the filters go, and how your major systems work. That's not extra. That's part of the job.</p>
+        <p>You get a written report with photos within 24 to 48 hours. Wide-angle shots so you can see exactly where each finding is, then close-ups of the issue itself. Pictures are worth a thousand words. Follow-up questions welcome anytime by phone or video call.</p>
+        <div class="service-pricing">
+          <span class="price">$500</span>
+          <span class="price-note">for homes under 1,500 sq ft. Larger homes priced at booking.</span>
+        </div>
+        <a href="{{ "contact/" | relURL }}" class="btn btn-primary">Schedule a buyer inspection</a>
+      </div>
+      <div class="service-detail-card">
+        <h2>Pre-listing inspection</h2>
+        <p>Same scope as a buyer inspection. Same report. The difference is timing.</p>
+        <p>When you get inspected before listing, you get a laundry list of items to address on your own schedule, at non-rush contractor pricing. You control the narrative instead of having issues surface during buyer negotiations when you have no leverage and no time.</p>
+        <p>Especially worth doing for homes over 30 years old or homes that show visible wear. You know your house better than anyone, but you also see past things every day that a buyer's inspector won't. Better to find out now.</p>
+        <p>The report stays between us. Confidential, same as a buyer inspection.</p>
+        <div class="service-pricing">
+          <span class="price">$500</span>
+          <span class="price-note">for homes under 1,500 sq ft. Larger homes priced at booking.</span>
+        </div>
+        <a href="{{ "contact/" | relURL }}" class="btn btn-primary">Schedule a pre-listing inspection</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2>What I'm looking at during an inspection</h2>
+    <p class="section-subtitle">These are real photos from real inspections. This is the kind of thing that gets missed when your inspector hasn't built houses.</p>
+
+    <div class="findings-grid">
+      <div class="finding-card">
+        <div class="finding-photo">
+          <img src="{{ "images/Hail damage to shingles.jpg" | relURL }}" alt="Hail damage to roof shingles" loading="lazy">
+        </div>
+        <div class="finding-info">
+          <h3>Hail damage to shingles</h3>
+          <p>The bruising shows up as dark circles where the granules got knocked off. Once those granules are gone, the mat underneath breaks down fast. This roof is on borrowed time.</p>
+        </div>
+      </div>
+
+      <div class="finding-card">
+        <div class="finding-photo">
+          <img src="{{ "images/Dangling wire potentialy hot.jpg" | relURL }}" alt="Dangling wire, potentially hot" loading="lazy">
+        </div>
+        <div class="finding-info">
+          <h3>Dangling wire, potentially hot</h3>
+          <p>An exposed wire with no cap, no box, no protection. This is a primary safety hazard. Not something to put on a list for later.</p>
+        </div>
+      </div>
+
+      <div class="finding-card">
+        <div class="finding-photo">
+          <img src="{{ "images/Porch foundation crumbling.jpg" | relURL }}" alt="Porch foundation crumbling" loading="lazy">
+        </div>
+        <div class="finding-info">
+          <h3>Porch foundation crumbling</h3>
+          <p>Freeze-thaw cycles did this. Water gets into the concrete, freezes, expands, and breaks it apart over years. In Minnesota, this is something I'm always looking for.</p>
+        </div>
+      </div>
+
+      <div class="finding-card">
+        <div class="finding-photo">
+          <img src="{{ "images/Active and visible water damage in attic.jpg" | relURL }}" alt="Active water damage in attic" loading="lazy">
+        </div>
+        <div class="finding-info">
+          <h3>Active water damage in attic</h3>
+          <p>This is current, not old. You can tell by the color and the dampness. Could be a roof leak, could be condensation from poor ventilation. Either way, it needs to be traced and fixed before it rots the sheathing.</p>
+        </div>
+      </div>
+
+      <div class="finding-card">
+        <div class="finding-photo">
+          <img src="{{ "images/improper wiring of GFCI.jpg" | relURL }}" alt="Improper wiring of GFCI outlet" loading="lazy">
+        </div>
+        <div class="finding-info">
+          <h3>Improper GFCI wiring</h3>
+          <p>A GFCI outlet that's wired wrong won't trip when it needs to. Near water, that's a serious problem. I test every one I can reach.</p>
+        </div>
+      </div>
+
+      <div class="finding-card">
+        <div class="finding-photo">
+          <img src="{{ "images/Cracked Window Pane.jpg" | relURL }}" alt="Cracked window pane" loading="lazy">
+        </div>
+        <div class="finding-info">
+          <h3>Cracked window pane</h3>
+          <p>Sometimes obvious, sometimes hidden by curtains or blinds. A cracked pane means the seal is gone too, which means you're losing heat all winter.</p>
+        </div>
+      </div>
+
+      <div class="finding-card">
+        <div class="finding-photo">
+          <img src="{{ "images/Drain waste leak.jpg" | relURL }}" alt="Drain waste leak under sink" loading="lazy">
+        </div>
+        <div class="finding-info">
+          <h3>Drain waste leak</h3>
+          <p>Slow leaks under sinks cause more damage than fast ones because nobody notices them. By the time the floor feels soft, the subfloor is already compromised.</p>
+        </div>
+      </div>
+
+      <div class="finding-card">
+        <div class="finding-photo">
+          <img src="{{ "images/Lifted Shingle moss growing on the surface.jpg" | relURL }}" alt="Lifted shingle with moss growth" loading="lazy">
+        </div>
+        <div class="finding-info">
+          <h3>Lifted shingle with moss growth</h3>
+          <p>Moss holds moisture against the shingle surface. Over time it works under the edges and lifts them. Once a shingle lifts, water gets underneath and the damage accelerates.</p>
+        </div>
+      </div>
+
+      <div class="finding-card">
+        <div class="finding-photo">
+          <img src="{{ "images/PRessure relief valve not properly sent to the floor or drain..jpg" | relURL }}" alt="Pressure relief valve not properly routed" loading="lazy">
+        </div>
+        <div class="finding-info">
+          <h3>T&amp;P relief valve not routed to floor</h3>
+          <p>If this valve pops, the discharge needs to go to the floor or a drain. Not into the air, not sideways, not capped off. This is a safety item, not a cosmetic one.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>What's not included</h2>
+    <p>An inspector can only report on what he can physically see. I can't see behind walls, under floors, or underground. If I can't access an area, it won't be in the report, and I'll tell you that clearly.</p>
+    <p>I don't currently offer septic system checks or radon testing. Both are on the plan for the future. For now, I refer those to qualified specialists. That is their wheelhouse, not mine.</p>
+    <p>I also don't provide cost estimates for repairs or advice on whether to buy or not buy. I identify problems and give you the information. What you do with it is your decision.</p>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container text-center">
+    <h2>Ready to schedule?</h2>
+    <p>Call, text, or fill out the form. We'll get back to you within one business day.</p>
+    <a href="tel:{{ .Site.Params.phone }}" class="cta-phone">{{ .Site.Params.phone }}</a>
+    <a href="{{ "contact/" | relURL }}" class="btn btn-primary">Request an inspection</a>
+  </div>
+</section>
+
+{{ end }}
