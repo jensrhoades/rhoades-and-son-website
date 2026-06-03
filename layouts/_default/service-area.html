@@ -1,0 +1,99 @@
+{{ define "main" }}
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>We'll come to you.</h1>
+    <p class="hero-tagline">Home inspections across northern and central Minnesota, from the North Shore to the Brainerd Lakes area and along the I-35 corridor. Based in Willow River.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p>We cover a big territory. Dusty grew up building houses across this part of the state, and he knows the construction patterns, the soil conditions, and the weather that affect homes in each area. A house on the North Shore deals with different problems than one in the Brainerd Lakes area or down toward the metro. That matters during an inspection.</p>
+    <p>If your community isn't listed below, call anyway. We'll go anywhere in Minnesota. Locations outside our primary service area may include a small travel fee, and we'll tell you that up front before you book.</p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="area-regions">
+
+      <div class="region">
+        <h2>Duluth &amp; North Shore</h2>
+        <p class="region-desc">Lake Superior shapes everything up here. Moisture, wind off the lake, heavy snow loads, and older housing stock in the port cities. Ice damming is common. So is foundation work from the deep frost line.</p>
+        <div class="region-communities">
+          <span class="area-tag">Duluth</span>
+          <span class="area-tag">Superior</span>
+          <span class="area-tag">Hermantown</span>
+          <span class="area-tag">Proctor</span>
+          <span class="area-tag">Two Harbors</span>
+          <span class="area-tag">Silver Bay</span>
+          <span class="area-tag">Beaver Bay</span>
+        </div>
+      </div>
+
+      <div class="region">
+        <h2>Iron Range</h2>
+        <p class="region-desc">Mining towns with solid old housing stock. A lot of these homes were built well, but they've been through decades of hard winters. Heating systems work overtime up here, and basements tell the story of every spring thaw.</p>
+        <div class="region-communities">
+          <span class="area-tag">Virginia</span>
+          <span class="area-tag">Hibbing</span>
+          <span class="area-tag">Eveleth</span>
+          <span class="area-tag">Chisholm</span>
+          <span class="area-tag">Mountain Iron</span>
+          <span class="area-tag">Grand Rapids</span>
+        </div>
+      </div>
+
+      <div class="region">
+        <h2>I-35 Corridor</h2>
+        <p class="region-desc">This is our home stretch. Willow River is right on this line. The corridor runs from Carlton County down through Pine County and into the north metro. Mix of newer builds and older rural homes, a lot of them on well and septic.</p>
+        <div class="region-communities">
+          <span class="area-tag">Carlton</span>
+          <span class="area-tag">Cloquet</span>
+          <span class="area-tag">Moose Lake</span>
+          <span class="area-tag">Willow River</span>
+          <span class="area-tag">Sandstone</span>
+          <span class="area-tag">Hinckley</span>
+          <span class="area-tag">Pine City</span>
+          <span class="area-tag">Mora</span>
+          <span class="area-tag">Cambridge</span>
+          <span class="area-tag">North Branch</span>
+        </div>
+      </div>
+
+      <div class="region">
+        <h2>Brainerd Lakes &amp; Central</h2>
+        <p class="region-desc">Lake cabins getting converted to year-round homes, seasonal places that sat empty for winters, and newer construction around the lakes. Each one inspects differently. A cabin that was never meant for January is a different conversation than a new build in Baxter.</p>
+        <div class="region-communities">
+          <span class="area-tag">Brainerd</span>
+          <span class="area-tag">Baxter</span>
+          <span class="area-tag">Crosby</span>
+          <span class="area-tag">Pequot Lakes</span>
+          <span class="area-tag">Aitkin</span>
+          <span class="area-tag">Mille Lacs area</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Minnesota weather and your home</h2>
+    <p>Minnesota has two frost zones. Zone 1, which is everything north of the metro, requires 60-inch frost footings. Zone 2 in the Twin Cities and south requires 42-inch. I check additions, attached garages, and decks to make sure footings went deep enough. If they didn't, freeze-thaw will eventually let you know, and it won't be subtle.</p>
+    <p>In winter, I can't always see shingles or flashing under two feet of snow. But the snow tells me a lot. Bare spots mean heat loss. Even snow means the insulation is doing its job. Ice dams on the eaves mean the ventilation isn't. I note what I can and can't evaluate, and I'm clear about it in the report.</p>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container text-center">
+    <h2>Ready to schedule?</h2>
+    <p>Call, text, or fill out the form. We'll get back to you within one business day.</p>
+    <a href="tel:{{ .Site.Params.phone }}" class="cta-phone">{{ .Site.Params.phone }}</a>
+    <a href="{{ "contact/" | relURL }}" class="btn btn-primary">Request an inspection</a>
+  </div>
+</section>
+
+{{ end }}
