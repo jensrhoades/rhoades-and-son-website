@@ -660,6 +660,17 @@ a:hover { color: var(--teal-hover); }
   padding: 28px;
 }
 
+.region-map {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 16px;
+}
+
+.region-map img {
+  width: 100%;
+  height: auto;
+}
+
 .region h2 {
   font-size: 1.15rem;
   font-weight: 600;
