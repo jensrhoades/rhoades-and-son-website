@@ -431,6 +431,11 @@ a:hover { color: var(--teal-hover); }
   gap: 24px;
 }
 
+.scheduler-wrap {
+  margin-top: 2rem;
+  max-width: 800px;
+}
+
 .footer-nachi {
   margin-top: 0.5rem;
 }
