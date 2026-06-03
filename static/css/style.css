@@ -431,6 +431,44 @@ a:hover { color: var(--teal-hover); }
   gap: 24px;
 }
 
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.cert-card {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid rgba(13, 37, 72, 0.12);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cert-card:hover {
+  border-color: rgba(13, 37, 72, 0.3);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.cert-icon {
+  margin-bottom: 0.75rem;
+  color: #0d2548;
+}
+
+.cert-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.cert-meta {
+  font-size: 0.8rem;
+  color: #666;
+}
+
 .scheduler-wrap {
   margin-top: 2rem;
   max-width: 800px;
