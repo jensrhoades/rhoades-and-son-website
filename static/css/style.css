@@ -691,6 +691,49 @@ a:hover { color: var(--teal-hover); }
   gap: 8px;
 }
 
+/* ---- Location Pages ---- */
+
+.location-page h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 24px;
+}
+
+.location-page h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+.location-page p {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  max-width: 720px;
+}
+
+.location-page a {
+  color: var(--teal);
+  text-decoration: none;
+}
+.location-page a:hover {
+  color: var(--teal-hover);
+  text-decoration: underline;
+}
+
+.location-page strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.location-page hr {
+  display: none;
+}
+
 /* ---- Responsive ---- */
 
 @media (max-width: 768px) {
