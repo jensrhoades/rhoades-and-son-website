@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<section class="section">
+  <div class="container location-page">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container text-center">
+    <h2>Ready to schedule?</h2>
+    <p>Call, text, or fill out the form. We'll get back to you within one business day.</p>
+    <a href="tel:{{ .Site.Params.phone }}" class="cta-phone">{{ .Site.Params.phone }}</a>
+    <a href="{{ "contact/" | relURL }}" class="btn btn-primary">Request an inspection</a>
+  </div>
+</section>
+
+{{ end }}
