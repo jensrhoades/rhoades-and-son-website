@@ -1,0 +1,64 @@
+{{- /*
+Structured data (JSON-LD), one block per page, built from [params.schema] in hugo.toml.
+Holds the business (same node and @id on every page), the WebSite, and this page's WebPage.
+
+Rules (Floodlight standard, Nov 2026):
+- Facts must match the Google Business Profile AND what the site shows. Only include what's visible
+  on the site: no hours unless the site shows hours, no street unless the site shows the street.
+- Service-area business with a hidden address: leave out street and postal_code.
+- Never add review/aggregateRating, FAQPage or HowTo markup, and no second business block anywhere.
+
+Example (keys are lowercase: Hugo lowercases param keys):
+[params.schema]
+  type = "GeneralContractor"        # most specific real schema.org LocalBusiness type
+  telephone = "+16785551234"         # E.164
+  street = "123 Main St"             # optional
+  city = "Atlanta"
+  region = "GA"
+  postal_code = "30312"              # optional
+  country = "US"
+  latitude = 33.72483                # optional, 5+ decimals from the GBP pin
+  longitude = -84.36712
+  map_url = "https://www.google.com/maps?cid=..."   # optional, the GBP listing
+  same_as = ["https://www.facebook.com/..."]        # optional, profiles linked on the site
+  area_served = ["Decatur, GA"]                      # optional
+  logo = "/images/logo.png"                          # optional
+*/ -}}
+{{- with site.Params.schema -}}
+{{- $s := . -}}
+{{- $root := site.BaseURL -}}
+{{- $bizID := print $root "#business" -}}
+{{- $siteID := print $root "#website" -}}
+
+{{- $addr := dict "@type" "PostalAddress" "addressLocality" $s.city "addressRegion" $s.region "addressCountry" ($s.country | default "US") -}}
+{{- with $s.street }}{{ $addr = merge $addr (dict "streetAddress" .) }}{{ end -}}
+{{- with $s.postal_code }}{{ $addr = merge $addr (dict "postalCode" .) }}{{ end -}}
+
+{{- $biz := dict "@type" $s.type "@id" $bizID "name" site.Title "url" $root "address" $addr -}}
+{{- with site.Params.description }}{{ $biz = merge $biz (dict "description" .) }}{{ end -}}
+{{- with $s.telephone }}{{ $biz = merge $biz (dict "telephone" .) }}{{ end -}}
+{{- with site.Params.email }}{{ $biz = merge $biz (dict "email" .) }}{{ end -}}
+{{- if and $s.latitude $s.longitude }}{{ $biz = merge $biz (dict "geo" (dict "@type" "GeoCoordinates" "latitude" $s.latitude "longitude" $s.longitude)) }}{{ end -}}
+{{- with $s.map_url }}{{ $biz = merge $biz (dict "hasMap" .) }}{{ end -}}
+{{- with $s.area_served -}}
+  {{- $areas := slice -}}
+  {{- range . }}{{ $areas = $areas | append (dict "@type" "City" "name" .) }}{{ end -}}
+  {{- $biz = merge $biz (dict "areaServed" $areas) -}}
+{{- end -}}
+{{- with $s.logo }}{{ $biz = merge $biz (dict "logo" (dict "@type" "ImageObject" "url" (absURL .))) }}{{ end -}}
+{{- with $s.same_as }}{{ $biz = merge $biz (dict "sameAs" .) }}{{ end -}}
+
+{{- $website := dict "@type" "WebSite" "@id" $siteID "url" $root "name" site.Title "publisher" (dict "@id" $bizID) -}}
+
+{{- $pageType := "WebPage" -}}
+{{- with $.RelPermalink -}}
+  {{- if hasPrefix . "/about" }}{{ $pageType = "AboutPage" }}{{ else if hasPrefix . "/contact" }}{{ $pageType = "ContactPage" }}{{ end -}}
+{{- end -}}
+{{- $name := cond $.IsHome site.Title ($.Title | default site.Title) -}}
+{{- $page := dict "@type" $pageType "@id" (print $.Permalink "#webpage") "url" $.Permalink "name" $name "isPartOf" (dict "@id" $siteID) -}}
+{{- with ($.Description | default site.Params.description) }}{{ $page = merge $page (dict "description" .) }}{{ end -}}
+{{- if $.IsHome }}{{ $page = merge $page (dict "about" (dict "@id" $bizID)) }}{{ end -}}
+
+{{- $graph := dict "@context" "https://schema.org" "@graph" (slice $biz $website $page) }}
+<script type="application/ld+json">{{ $graph | jsonify | safeJS }}</script>
+{{- end -}}
