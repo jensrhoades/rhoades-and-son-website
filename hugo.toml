@@ -9,6 +9,16 @@ title = "Rhoades & Son Home Inspections"
   tagline = "Two Generations. One Standard of Excellence."
   description = "Home inspections across northern and central Minnesota. 20+ years of construction experience behind every report."
 
+# Structured data (JSON-LD) on every page, via layouts/partials/schema.html.
+# The GBP hides the address (service-area business), so no street, ZIP or map pin.
+[params.schema]
+  type = "ProfessionalService"
+  telephone = "+16515640946"
+  city = "Willow River"
+  region = "MN"
+  country = "US"
+  map_url = "https://www.google.com/maps?cid=16092576367980308241"
+
 [menu]
   [[menu.main]]
     name = "Services"
